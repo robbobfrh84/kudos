@@ -2113,6 +2113,7 @@ export namespace Prisma {
     title: string | null
     category: string | null
     owner: string | null
+    image: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -2122,6 +2123,7 @@ export namespace Prisma {
     title: string | null
     category: string | null
     owner: string | null
+    image: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -2131,6 +2133,7 @@ export namespace Prisma {
     title: number
     category: number
     owner: number
+    image: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -2150,6 +2153,7 @@ export namespace Prisma {
     title?: true
     category?: true
     owner?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -2159,6 +2163,7 @@ export namespace Prisma {
     title?: true
     category?: true
     owner?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -2168,6 +2173,7 @@ export namespace Prisma {
     title?: true
     category?: true
     owner?: true
+    image?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -2264,6 +2270,7 @@ export namespace Prisma {
     title: string | null
     category: string | null
     owner: string | null
+    image: string | null
     createdAt: Date
     updatedAt: Date | null
     _count: BoardCountAggregateOutputType | null
@@ -2292,6 +2299,7 @@ export namespace Prisma {
     title?: boolean
     category?: boolean
     owner?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     cards?: boolean | board$cardsArgs<ExtArgs>
@@ -2303,6 +2311,7 @@ export namespace Prisma {
     title?: boolean
     category?: boolean
     owner?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["board"]>
@@ -2312,6 +2321,7 @@ export namespace Prisma {
     title?: boolean
     category?: boolean
     owner?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["board"]>
@@ -2321,11 +2331,12 @@ export namespace Prisma {
     title?: boolean
     category?: boolean
     owner?: boolean
+    image?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type boardOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"board_id" | "title" | "category" | "owner" | "createdAt" | "updatedAt", ExtArgs["result"]["board"]>
+  export type boardOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"board_id" | "title" | "category" | "owner" | "image" | "createdAt" | "updatedAt", ExtArgs["result"]["board"]>
   export type boardInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     cards?: boolean | board$cardsArgs<ExtArgs>
     _count?: boolean | BoardCountOutputTypeDefaultArgs<ExtArgs>
@@ -2343,6 +2354,7 @@ export namespace Prisma {
       title: string | null
       category: string | null
       owner: string | null
+      image: string | null
       createdAt: Date
       updatedAt: Date | null
     }, ExtArgs["result"]["board"]>
@@ -2773,6 +2785,7 @@ export namespace Prisma {
     readonly title: FieldRef<"board", 'String'>
     readonly category: FieldRef<"board", 'String'>
     readonly owner: FieldRef<"board", 'String'>
+    readonly image: FieldRef<"board", 'String'>
     readonly createdAt: FieldRef<"board", 'DateTime'>
     readonly updatedAt: FieldRef<"board", 'DateTime'>
   }
@@ -4404,6 +4417,7 @@ export namespace Prisma {
     title: 'title',
     category: 'category',
     owner: 'owner',
+    image: 'image',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -4566,6 +4580,7 @@ export namespace Prisma {
     title?: StringNullableFilter<"board"> | string | null
     category?: StringNullableFilter<"board"> | string | null
     owner?: StringNullableFilter<"board"> | string | null
+    image?: StringNullableFilter<"board"> | string | null
     createdAt?: DateTimeFilter<"board"> | Date | string
     updatedAt?: DateTimeNullableFilter<"board"> | Date | string | null
     cards?: CardListRelationFilter
@@ -4576,6 +4591,7 @@ export namespace Prisma {
     title?: SortOrderInput | SortOrder
     category?: SortOrderInput | SortOrder
     owner?: SortOrderInput | SortOrder
+    image?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrderInput | SortOrder
     cards?: cardOrderByRelationAggregateInput
@@ -4589,6 +4605,7 @@ export namespace Prisma {
     title?: StringNullableFilter<"board"> | string | null
     category?: StringNullableFilter<"board"> | string | null
     owner?: StringNullableFilter<"board"> | string | null
+    image?: StringNullableFilter<"board"> | string | null
     createdAt?: DateTimeFilter<"board"> | Date | string
     updatedAt?: DateTimeNullableFilter<"board"> | Date | string | null
     cards?: CardListRelationFilter
@@ -4599,6 +4616,7 @@ export namespace Prisma {
     title?: SortOrderInput | SortOrder
     category?: SortOrderInput | SortOrder
     owner?: SortOrderInput | SortOrder
+    image?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrderInput | SortOrder
     _count?: boardCountOrderByAggregateInput
@@ -4616,6 +4634,7 @@ export namespace Prisma {
     title?: StringNullableWithAggregatesFilter<"board"> | string | null
     category?: StringNullableWithAggregatesFilter<"board"> | string | null
     owner?: StringNullableWithAggregatesFilter<"board"> | string | null
+    image?: StringNullableWithAggregatesFilter<"board"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"board"> | Date | string
     updatedAt?: DateTimeNullableWithAggregatesFilter<"board"> | Date | string | null
   }
@@ -4740,6 +4759,7 @@ export namespace Prisma {
     title?: string | null
     category?: string | null
     owner?: string | null
+    image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string | null
     cards?: cardCreateNestedManyWithoutBoardInput
@@ -4750,6 +4770,7 @@ export namespace Prisma {
     title?: string | null
     category?: string | null
     owner?: string | null
+    image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string | null
     cards?: cardUncheckedCreateNestedManyWithoutBoardInput
@@ -4759,6 +4780,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     cards?: cardUpdateManyWithoutBoardNestedInput
@@ -4769,6 +4791,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     cards?: cardUncheckedUpdateManyWithoutBoardNestedInput
@@ -4779,6 +4802,7 @@ export namespace Prisma {
     title?: string | null
     category?: string | null
     owner?: string | null
+    image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string | null
   }
@@ -4787,6 +4811,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
@@ -4796,6 +4821,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
@@ -5025,6 +5051,7 @@ export namespace Prisma {
     title?: SortOrder
     category?: SortOrder
     owner?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -5038,6 +5065,7 @@ export namespace Prisma {
     title?: SortOrder
     category?: SortOrder
     owner?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -5047,6 +5075,7 @@ export namespace Prisma {
     title?: SortOrder
     category?: SortOrder
     owner?: SortOrder
+    image?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -5525,6 +5554,7 @@ export namespace Prisma {
     title?: string | null
     category?: string | null
     owner?: string | null
+    image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string | null
   }
@@ -5534,6 +5564,7 @@ export namespace Prisma {
     title?: string | null
     category?: string | null
     owner?: string | null
+    image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string | null
   }
@@ -5558,6 +5589,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
@@ -5567,6 +5599,7 @@ export namespace Prisma {
     title?: NullableStringFieldUpdateOperationsInput | string | null
     category?: NullableStringFieldUpdateOperationsInput | string | null
     owner?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }

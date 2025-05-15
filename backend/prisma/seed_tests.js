@@ -1,4 +1,4 @@
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('../generated/prisma');
 const prisma = new PrismaClient()
 
 async function main() {
@@ -8,7 +8,7 @@ async function main() {
     data: { name: 'Bob', number: 49 }
   })
   await prisma.test.create({
-    data: { name: 'Jordan', number: 11 }
+    data: { name: 'Jordan', number: 13 }
   })
   await prisma.test.create({
     data: { name: 'Shareena', number: 17 }
@@ -18,10 +18,10 @@ async function main() {
 }
 
 main()
-  .catch(e => {
-    console.error('🌰 ❌ Seed error:', e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  })
+.catch(e => {
+  console.error('🌰 ❌ Seed error:', e);
+  process.exit(1);
+})
+.finally(async () => {
+  await prisma.$disconnect();
+})

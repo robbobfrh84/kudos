@@ -9,6 +9,10 @@ Everything setup and installed? (No? Jump to "Frontend & Backend Installs")
 To generate a migration (or update if changes are made):
 - `npx prisma migrate dev --name init`
 
+### Seeding (😱 NOTE! It's gonna wipe all your data!)
+- `node prisma/tests_seed.js`
+- `node prisma/boards_seed.js`
+
 ### Testing API Urls
 `/boards`:
 - `http://localhost:3001/boards/1` - Where 1 is the id of a created board.
@@ -20,6 +24,9 @@ To generate a migration (or update if changes are made):
 `/tests`:
 - `http://localhost:3001/tests`
 - `http://localhost:3001/tests/test`
+
+
+# Installs
 
 ### Frontend & Backend Installs:
 - `cd frontend` > `npm install` > `npm run dev`
