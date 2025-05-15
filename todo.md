@@ -1,9 +1,11 @@
 ### Where I left off
-- I want to plug this all in first. So skipping most of frontend application.
+- 
 
 ### To Do 🟡 ✅
-- Just get it all hooked up first using Gabe's code. 
-- Then refactor back into having frondend / backend folders
+- 🟡 Try now setting up test api. 
+  - Add any
+- Seed db with test data
+- Shift over to boards and cards
 
 ### Summary 
 ✅ Milestone 0: Project Setup
@@ -15,10 +17,8 @@ Milestone 4: Deployment 🚀
 Finalize:
 - CLEAN THIS TO DO UP! (it's in repo)
 
-
-
 ### Resources
 -  
 
-### Clarifications of Directions
-- 
+### More info on setup and Development
+- See `development.md`. 
