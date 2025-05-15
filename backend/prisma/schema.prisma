@@ -14,8 +14,25 @@ model test {
   number Int
 }
 
-model test2 {
-  id         Int    @id @default(autoincrement())
-  movie_name String
-  year       Int
+model board {
+  board_id  Int       @id @default(autoincrement())
+  title     String?
+  category  String?
+  owner     String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  cards     card[]
+}
+
+model card {
+  card_id     Int     @id @default(autoincrement())
+  title       String?
+  description String?
+  gif         String?
+  owner       String?
+  votes       Int?    @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+  board     board?    @relation(fields: [board_id], references: [board_id])
+  board_id  Int?
 }

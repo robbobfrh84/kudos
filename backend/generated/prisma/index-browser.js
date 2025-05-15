@@ -126,10 +126,25 @@ exports.Prisma.TestScalarFieldEnum = {
   number: 'number'
 };
 
-exports.Prisma.Test2ScalarFieldEnum = {
-  id: 'id',
-  movie_name: 'movie_name',
-  year: 'year'
+exports.Prisma.BoardScalarFieldEnum = {
+  board_id: 'board_id',
+  title: 'title',
+  category: 'category',
+  owner: 'owner',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CardScalarFieldEnum = {
+  card_id: 'card_id',
+  title: 'title',
+  description: 'description',
+  gif: 'gif',
+  owner: 'owner',
+  votes: 'votes',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  board_id: 'board_id'
 };
 
 exports.Prisma.SortOrder = {
@@ -142,10 +157,16 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
   test: 'test',
-  test2: 'test2'
+  board: 'board',
+  card: 'card'
 };
 
 /**
