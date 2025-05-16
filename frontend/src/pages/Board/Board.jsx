@@ -25,7 +25,7 @@ const Board = () => {
 
   const fetchCards = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/cards/${boardId}`);
+      const response = await axios.get(`${SERVER_URL}/cards/${boardId}`);
       const data = response.data.cards.sort((a, b) => b.votes - a.votes);
       setCards(response.data.cards);
     } catch (error) {
@@ -35,7 +35,7 @@ const Board = () => {
 
   const fetchBoardData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/boards/${boardId}`);
+      const response = await axios.get(`${SERVER_URL}/boards/${boardId}`);
       const title = response.data.board.title;
       setBoardTitle(title);
     } catch (error) {
@@ -45,7 +45,7 @@ const Board = () => {
 
   const handleDelete = async (cardId) => {
     try {
-      await axios.delete(`http://localhost:3001/cards/${cardId}/board/${boardId}`);
+      await axios.delete(`${SERVER_URL}/cards/${cardId}/board/${boardId}`);
       fetchCards();
     } catch (error) {
       console.error("Error deleting card:", error);

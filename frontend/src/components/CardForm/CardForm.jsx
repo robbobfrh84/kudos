@@ -47,7 +47,7 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
         alert("Please fill out all fields");
         return;
       }
-      const response = await axios.post(`http://localhost:3001/cards/${boardId}`, {
+      const response = await axios.post(`${SERVER_URL}/cards/${boardId}`, {
         title,
         description,
         gif,

@@ -17,7 +17,7 @@ const Card = ( { card, onDelete } ) => {
 
   const handleUpvote = async () => {
     try {
-      await axios.patch( `http://localhost:3001/cards/${cardId}/board/${boardId}`,
+      await axios.patch( `${SERVER_URL}/cards/${cardId}/board/${boardId}`,
         { votes: votes + 1, }
       );
       setVotes(votes + 1);
