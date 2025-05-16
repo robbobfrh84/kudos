@@ -5,9 +5,9 @@ import Card from "../../components/Card/Card";
 import CardForm from "../../components/CardForm/CardForm";
 
 // @ts-ignore
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer.jsx";
 // @ts-ignore
-import Header from '../../components/Feader/Header';
+import Header from '../../components/Header/Header.jsx';
 
 
 import "./Board.css";
