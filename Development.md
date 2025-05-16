@@ -69,3 +69,57 @@ It needed to be changed to...
 
 It's confusing because I didn't see any messages indicating this change.
 
+# Deploying To Render
+Note: make sure all your changes are up to date on your hosting repository.
+
+### Front End
+Start here: https://dashboard.render.com/
+- Click [+ Add new]
+  - Dropdown: Select: [Static Site]
+- Log into github
+- Find your repo and select
+- Add your Name (maybe auto filled)
+
+Add Root Directory (unless your application is on the root level of your repo)
+- I had mine in `frontend/`
+- If so, find the "Root Directory" section
+- input `frontend`
+
+Add Publish Directory
+- I just added `dist` to the prefixed `frontend/` field. So, just ad `dist` if you don't have a root directory.
+
+Add Enviroment Variables
+- I'm using Giphy Capture API, and i have it in the `.env` file at the root level of the `frontend` folder.
+- So Copy the Key name only `VITE_GIPHY_API_KEY` and past in input.
+- then copy the key only: and paste ino key input. 
+
+Click > [Deploy Static Site]!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,11 +22,12 @@ Deploy
 ✅ Milestone 1: Frontend Application
 ✅ Milestone 2: Backend Application
 ✅ Milestone 3: Connecting Backend to Frontend
-Milestone 4: Deployment 🚀
+🟡 Milestone 4: Deployment 🚀
 
 Finalize:
 - CLEAN THIS TO DO UP! (it's in repo)
 - Move stuff up a folder you wanna keep for private project info. 
+- Move last to do to your main todo file. 
 
 Bonus
 - Add Image links to seeded code
