@@ -146,6 +146,10 @@ Click > [Deploy Web Service]
 Error on build ?
 - When building the Web Service I got a long crypic error. 
 
+<!-- ~~~ -->
+- Tried removing quotations on `DATABASE_URL=<your new URL here>` instead of `DATABASE_URL="<your new URL here>"`
+ -  NOPE! BUT probably should?!?!!?
+
 
 
 

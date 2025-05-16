@@ -6,6 +6,9 @@
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "keywords": [],
   "author": "Bob Main",
   "license": "ISC",
