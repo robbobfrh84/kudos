@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Home.css";
 // @ts-ignore
-import BoardForm from "../../components/Boardform/BoardForm.jsx";
+import BoardForm from "../../components/BoardForm/BoardForm.jsx";
 
 // @ts-ignore
 import Header from '../../components/Header/Header.jsx';
