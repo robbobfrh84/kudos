@@ -14,7 +14,6 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
   const [selectedGifUrl, setSelectedGifUrl] = useState("");
 
   const searchGifs = async () => {
-    console.log(apiKey)
     try {
       const response = await axios.get("https://api.giphy.com/v1/gifs/search", {
         params: {
