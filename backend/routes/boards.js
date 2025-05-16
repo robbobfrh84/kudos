@@ -40,6 +40,7 @@ router.get('/', async (req, res) => {
 /* 📫 POST create a new board */
 router.post('/', async (req, res) => {
   console.log('📫 POST create a new board ✅');
+  console.log("Incoming POST /boards request:", req.body);
   const { title, category, owner, image } = req.body;
   try {
     const board = await prisma.board.create({

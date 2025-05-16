@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./BoardForm.css";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const BoardForm = ({ onSuccess, onClose }) => {
   const [newBoardTitle, setNewBoardTitle] = useState("");
   const [newBoardCategory, setNewBoardCategory] = useState("");
@@ -16,6 +18,8 @@ const BoardForm = ({ onSuccess, onClose }) => {
         alert("Please fill out all fields");
         return; 
       }
+
+      console.log('---:',SERVER_URL+"/boards")
       await axios.post(SERVER_URL+"/boards", {
         title: newBoardTitle,
         category: newBoardCategory,
