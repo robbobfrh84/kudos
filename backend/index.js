@@ -9,7 +9,6 @@ const app = express();
 const router = express.Router();
 
 app.use("/", router);
-app.use(express.json());
 // app.use(cors());
 
 const allowedOrigins = ['http://localhost:5173', 'https://kudos-mfz5.onrender.com/'];
@@ -23,6 +22,9 @@ app.use(cors({
     }
   }
 }));
+
+app.use(express.json());
+
 
 router.get('/', (req, res) => { 
   res.send('Welcome to Kudos Board API! See source code for more info about endpoints.');
