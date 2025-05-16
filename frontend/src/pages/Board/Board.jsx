@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer.jsx";
 // @ts-ignore
 import Header from '../../components/Header/Header.jsx';
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 import "./Board.css";
 

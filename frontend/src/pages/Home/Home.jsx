@@ -29,8 +29,7 @@ const Home = () => {
       const response = await axios.get(`${SERVER_URL}/boards`, {
         withCredentials: true
       });
-      console.log('response:',response)
-      // setBoards(response.data.boards);
+      setBoards(response.data.boards);
     } catch (error) {
       console.error("Error fetching boards:", error);
     }
@@ -114,7 +113,7 @@ const Home = () => {
 
   const deleteBoard = async (boardId) => {
     try {
-      const response = await fetch(`http://localhost:3001/boards/${boardId}`, {
+      const response = await fetch(`${SERVER_URL}/boards/${boardId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

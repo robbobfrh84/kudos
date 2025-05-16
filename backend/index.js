@@ -28,25 +28,25 @@ app.get('/', (req, res) => {
   res.send('Welcome to Kudos Board API! See source code for more info about endpoints.');
 });
 
-app.get('/migrate', async (req, res) => {
-  try {
-    const { exec } = require('child_process');
-    exec('npx prisma migrate deploy', (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Migration error: ${error.message}`);
-        return res.status(500).send('Migration failed.');
-      }
-      if (stderr) {
-        console.error(`stderr: ${stderr}`);
-      }
-      console.log(`stdout: ${stdout}`);
-      res.send('Migration complete.');
-    });
-  } catch (err) {
-    console.error('Migration route error:', err);
-    res.status(500).send('Error running migration.');
-  }
-});
+// app.get('/migrate', async (req, res) => {
+//   try {
+//     const { exec } = require('child_process');
+//     exec('npx prisma migrate deploy', (error, stdout, stderr) => {
+//       if (error) {
+//         console.error(`Migration error: ${error.message}`);
+//         return res.status(500).send('Migration failed.');
+//       }
+//       if (stderr) {
+//         console.error(`stderr: ${stderr}`);
+//       }
+//       console.log(`stdout: ${stdout}`);
+//       res.send('Migration complete.');
+//     });
+//   } catch (err) {
+//     console.error('Migration route error:', err);
+//     res.status(500).send('Error running migration.');
+//   }
+// });
 
 app.use("/tests", tests);
 app.use("/boards", boards);

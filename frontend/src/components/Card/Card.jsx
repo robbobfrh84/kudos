@@ -3,6 +3,8 @@ import axios from "axios";
 
 import "./Card.css";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const Card = ( { card, onDelete } ) => {
   const [votes, setVotes] = useState(card.votes || 0);
 

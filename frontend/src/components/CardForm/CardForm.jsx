@@ -3,6 +3,7 @@ import axios from "axios";
 import "./CardForm.css";
 
 const apiKey = import.meta.env.VITE_GIPHY_API_KEY;
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const CardForm = ({ boardId, onSuccess, onClose }) => {
   const [title, setTitle] = useState("");

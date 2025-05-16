@@ -175,6 +175,32 @@ app.use(cors({
 }));
 ```
 
+Then, this crazy hack.... Add the following code, then deployed the server, hit the endpoint `https://myapp-api-shvb.onrender.com/migrate` in the browser tab. Took ages, finally finished, then... it worked!
+
+After that, I noted that code out and redeployed both front and back end and it worked!
+
+```javascript
+app.get('/migrate', async (req, res) => {
+  try {
+    const { exec } = require('child_process');
+    exec('npx prisma migrate deploy', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Migration error: ${error.message}`);
+        return res.status(500).send('Migration failed.');
+      }
+      if (stderr) {
+        console.error(`stderr: ${stderr}`);
+      }
+      console.log(`stdout: ${stdout}`);
+      res.send('Migration complete.');
+    });
+  } catch (err) {
+    console.error('Migration route error:', err);
+    res.status(500).send('Error running migration.');
+  }
+});
+```
+
 
 
 
