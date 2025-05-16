@@ -11,9 +11,17 @@ const router = express.Router();
 app.use("/", router);
 app.use(express.json());
 // app.use(cors());
+
+const allowedOrigins = ['http://localhost:5173', 'https://kudos-mfz5.onrender.com/'];
+
 app.use(cors({
-  origin: 'http://localhost:5173', // or use a function to allow multiple origins
-  credentials: true // only if you're using cookies/auth headers
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
 
 router.get('/', (req, res) => { 

@@ -157,8 +157,23 @@ Error on build ?
 <!-- ~~~ -->
 Adding URL to local frontend i get a cors error: `ttps://myapp-api-shvb.onrender.com/' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
 
+- in server: `npm install cors`
 
+Add to index.js
 
+``` javascript
+const allowedOrigins = ['http://localhost:5173', 'https://kudos-mfz5.onrender.com/'];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
+```
 
 
 
