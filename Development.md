@@ -95,6 +95,13 @@ Add Enviroment Variables
 
 Click > [Deploy Static Site]!
 
+Ready to Re-Deploy?
+- Just Select the "Manual Deploy" Button, then "Deploy latest commmit"
+
+### Backend
+Start here: https://dashboard.render.com/
+- Click [+ Add new]
+  - Dropdown: Select: []
 
 
 

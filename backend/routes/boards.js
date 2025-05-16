@@ -40,10 +40,10 @@ router.get('/', async (req, res) => {
 /* 📫 POST create a new board */
 router.post('/', async (req, res) => {
   console.log('📫 POST create a new board ✅');
-  const { title, category, owner } = req.body;
+  const { title, category, owner, image } = req.body;
   try {
     const board = await prisma.board.create({
-      data: { title, category, owner },
+      data: { title, category, owner, image },
     });
     res.status(201).json(board);
   } catch (error) {
