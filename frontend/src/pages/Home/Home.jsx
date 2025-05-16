@@ -26,7 +26,7 @@ const Home = () => {
   const fetchBoards = async () => {
     try {
       console.log('SERVER_URL:',SERVER_URL)
-      const response = await axios.get(SERVER_URL + "/", {
+      const response = await axios.get(SERVER_URL, {
         withCredentials: true
       });
       // setBoards(response.data.boards);
