@@ -5,6 +5,7 @@ import "./Home.css";
 // @ts-ignore
 import BoardForm from "../../components/Boardform/BoardForm";
 
+// @ts-ignore
 import Header from '../../components/header/Header';
 // @ts-ignore
 import Footer from "../../components/footer/Footer";

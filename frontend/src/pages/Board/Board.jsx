@@ -4,9 +4,11 @@ import axios from "axios";
 import Card from "../../components/Card/Card";
 import CardForm from "../../components/CardForm/CardForm";
 
-import Header from '../../components/header/Header.jsx';
 // @ts-ignore
 import Footer from "../../components/footer/Footer.jsx";
+// @ts-ignore
+import Header from '../../components/header/Header.jsx';
+
 
 import "./Board.css";
 
