@@ -146,36 +146,16 @@ Click > [Deploy Web Service]
 Error on build ?
 - When building the Web Service I got a long crypic error. 
 
-### Run Migrations & Seed (optional)
-Start here: https://dashboard.render.com/
-- Click [+ Add new]
-  - Dropdown: Select: [postgres]
-
-Name: db-migrate
-
-Command: npx prisma migrate deploy
-
-(If you haven’t run prisma migrate dev locally to create a migration yet, do that first and push to GitHub.)
-
-To seed:
-
-Create prisma/seed.js
-
-Add to package.json:
-
-json
-Copy
-Edit
-"prisma": {
-  "seed": "node prisma/seed.js"
-}
-Then run a job: npx prisma db seed
 
 <!-- ~~~ -->
 - Tried removing quotations on `DATABASE_URL=<your new URL here>` instead of `DATABASE_URL="<your new URL here>"`
  -  NOPE! BUT probably should?!?!!?
 
 - ✨ Tried adding `npx prisma generate && npm install` to build command...
+
+
+<!-- ~~~ -->
+Adding URL to local frontend i get a cors error: `ttps://myapp-api-shvb.onrender.com/' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
 
 
 

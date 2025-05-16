@@ -10,6 +10,8 @@ import Header from '../../components/Header/Header.jsx';
 // @ts-ignore
 import Footer from "../../components/Footer/Footer.jsx";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const Home = () => {
   const [boards, setBoards] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -23,8 +25,9 @@ const Home = () => {
 
   const fetchBoards = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/boards");
-      setBoards(response.data.boards);
+      console.log('SERVER_URL:',SERVER_URL)
+      const response = await axios.get(SERVER_URL+"/");
+      // setBoards(response.data.boards);
       
     } catch (error) {
       console.error("Error fetching boards:", error);
