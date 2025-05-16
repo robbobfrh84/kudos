@@ -6,9 +6,9 @@ import "./Home.css";
 import BoardForm from "../../components/Boardform/BoardForm";
 
 // @ts-ignore
-import Header from '../../components/header/Header';
+import Header from '../../components/Header/Header';
 // @ts-ignore
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [boards, setBoards] = useState([]);
