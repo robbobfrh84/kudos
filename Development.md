@@ -101,7 +101,38 @@ Ready to Re-Deploy?
 ### Backend
 Start here: https://dashboard.render.com/
 - Click [+ Add new]
-  - Dropdown: Select: []
+  - Dropdown: Select: [postgres]
+- Name: e.g. myapp-db
+- Project: *Leave empty*
+- Database: *Leave empty*
+- User: *Leave empty*
+- Region: I selected Oregon US West
+- PostgreSQL Version: 14
+  - In Terminal run: `PostgreSQL Version` to get your version.
+- Datadog API Key: *Leave empty*
+- Datadog Region: *Leave empty*
+- Plan Options: Free Basic. 
+
+Click > [Create Database]
+
+Get DATABASE_URL
+- With the Info tab open, find the Connect dropdown 
+- Copy the "Internal" URL
+
+Update your DATABASE_URL
+- In your code, find the `.env` file.
+- Note out your local value for DATABASE_URL (You'll wanna save that)
+- Now, add your new url: `DATABASE_URL="<your new URL here>"`
+
+
+
+
+
+
+
+
+
+
 
 
 
