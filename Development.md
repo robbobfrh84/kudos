@@ -69,6 +69,7 @@ It needed to be changed to...
 
 It's confusing because I didn't see any messages indicating this change.
 
+
 # Deploying To Render
 Note: make sure all your changes are up to date on your hosting repository.
 
@@ -81,9 +82,8 @@ Start here: https://dashboard.render.com/
 - Add your Name (maybe auto filled)
 
 Add Root Directory (unless your application is on the root level of your repo)
-- I had mine in `frontend/`
-- If so, find the "Root Directory" section
-- input `frontend`
+- I had mine in a `frontend` folder on my repo
+- So, I needed to add `frontend` here
 
 Add Publish Directory
 - I just added `dist` to the prefixed `frontend/` field. So, just ad `dist` if you don't have a root directory.
@@ -98,11 +98,11 @@ Click > [Deploy Static Site]!
 Ready to Re-Deploy?
 - Just Select the "Manual Deploy" Button, then "Deploy latest commmit"
 
-### Backend
+### Postgres DB
 Start here: https://dashboard.render.com/
 - Click [+ Add new]
   - Dropdown: Select: [postgres]
-- Name: e.g. myapp-db
+- Name: myapp-db (*you can do whatever)
 - Project: *Leave empty*
 - Database: *Leave empty*
 - User: *Leave empty*
@@ -124,11 +124,27 @@ Update your DATABASE_URL
 - Note out your local value for DATABASE_URL (You'll wanna save that)
 - Now, add your new url: `DATABASE_URL="<your new URL here>"`
 
+NOTE: This will not work when you try and run it locally!
 
+### Node JS Server
+Start here: https://dashboard.render.com/
+- Click [+ Add new]
+  - Dropdown: Select: [postgres]
+- Connect your GitHub repo and pick your Node project
+- Name: myapp-api (*you can do whatever)
+- Language: Node
+- Branch: main 
+- Region: *should hopefully be already set to what you chose for DB*
+- Root Directory: backend (Leave black if package.json is at root level of your repo)
+- Build Command: npm install
+- Start Command: npm start (or node index.js)
+- Instance Type: Free
+- Environment Variables: Add your `DATABASE_URL` as the key and then the value as the URL you got from PostGres DB setup.
 
+Click > [Deploy Web Service]
 
-
-
+Error on build ?
+- When building the Web Service I got a long crypic error. 
 
 
 
