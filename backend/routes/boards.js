@@ -12,7 +12,7 @@ router.get('/:boardId', async (req, res) => {
   try {
     const board = await prisma.board.findUnique({
       where: { board_id: parseInt(boardId) },
-      include: {cards: true}
+      include: {cards: true } 
     });
     if (!board) {
       res.status(404).json({ error: 'Board not found' });
@@ -39,12 +39,35 @@ router.get('/', async (req, res) => {
 
 /* 📫 POST create a new board */
 router.post('/', async (req, res) => {
-  res.send('📫 POST create a new board / ... TO DO...');
+  console.log('📫 POST create a new board ✅');
+  const { title, category, owner } = req.body;
+  try {
+    const board = await prisma.board.create({
+      data: { title, category, owner },
+    });
+    res.status(201).json(board);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 })
 
 /* ❌ DELETE a board */
 router.delete('/:boardId', async (req, res) => {
-  res.send('❌ DELETE a board '+req.originalUrl+'... TO DO...');
+  console.log('❌ DELETE a board ✅');
+  const { boardId } = req.params;
+  try {
+    await prisma.board.delete({
+      where: {
+        board_id: parseInt(boardId),
+      },
+    });
+
+    res.status(204).end();
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 })
 
 

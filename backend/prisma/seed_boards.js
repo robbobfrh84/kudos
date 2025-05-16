@@ -7,7 +7,7 @@ async function main() {
   const catagories = [
     "Recent",
     "Celebration",
-    "Thank you",
+    "Thank You",
     "Inspiration"
   ]
 

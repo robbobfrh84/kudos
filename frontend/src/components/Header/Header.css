@@ -1,0 +1,23 @@
+header {
+  background-color:  rgb(32,178,170);
+  box-shadow: 0px 0px 5px 3px rgba(100,100,100,0.75);
+}
+
+header h1 {
+  margin: 0px;
+  padding: 10px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+header .image-container {
+  display: inline-block;
+  position: relative;
+  top: 5px
+}
+
+header img {
+  width: 50px;
+  padding-right: 10px;
+  padding-left: 20px;
+}

@@ -2,24 +2,35 @@
 - 
 
 ### To Do 🟡 ✅
-Hooking up front end...
-- Move onto Milstone 1 & Breakup next few To Dos for setting up react
+
+Push repo
+- Add Links from github images to seed data.
+- Add random links to BoardForm & swap to random images if in CODE if no image is added on submit. 
+
+Deploy!
+
+Review 
+- Review rubrick
+- Skim project directions too. 
+
+Deploy
 - 
 
-Next...
-- Message to post?
-  - "Hey everyone. I just wanted to share a few repos I found that have helped be on project 3. My DB skills are pretty limited, and I'm also new to postgres. So it helped to reference these code examples that were pretty close to our project goals.... ", "note: some code is outdated / incomplete", "note: i struggled getting prima hooked up and was a cat chasing my tail a bit (share my repo's Gotchas)
 
 ### Summary 
 ✅ Milestone 0: Project Setup
-Milestone 1: Frontend Application
-🟠 Milestone 2: Backend Application
-  - Mostly setup, but we need frontend here. 
-Milestone 3: Connecting Backend to Frontend
+✅ Milestone 1: Frontend Application
+✅ Milestone 2: Backend Application
+✅ Milestone 3: Connecting Backend to Frontend
 Milestone 4: Deployment 🚀
 
 Finalize:
 - CLEAN THIS TO DO UP! (it's in repo)
+- Move stuff up a folder you wanna keep for private project info. 
+
+Bonus
+- Add Image links to seeded code
+- Replace random images with 5-7 of my own.
 
 ### Resources
 - JSON Formatter: https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en&pli=1
