@@ -85,4 +85,4 @@ Deployed Application (**required**): [Kudos Board Deployed Site](https://kudos-m
 
 ### Walkthrough Video
 
-LINK: `ADD_EMBEDDED_CODE_HERE`
+LINK: https://www.loom.com/share/0dac097001b544e7ae5dfb1147999da9
